@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const { image } = await request.json();
   const body: GPT4VCompletionRequest = {
     model: "gpt-4-vision-preview",
-    max_tokens: 4096,
+    max_tokens: 8192,
     messages: [
       {
         role: "system",
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        Authorization: `Bearer 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`,
       },
       body: JSON.stringify(body),
     });
